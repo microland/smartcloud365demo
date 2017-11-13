@@ -1,0 +1,51 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Username for the VM",
+        "type": "string",
+        "displayname": "Username"
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Password for the VM",
+        "type": "securestring",
+        "displayname": "Password"
+      }
+    },
+    "vmSize": {
+      "type": "string",
+      "allowedValues": [
+        "Standard_A0",
+        "Standard_A1",
+        "Standard_A2"
+      ],
+      "metadata": {
+        "description": "Size of the VM",
+        "type": "ddl",
+        "displayname": "Size of the VM"
+      }
+    }
+  },
+  "variables": {
+    "imagePublisher": "Canonical",
+    "imageOffer": "Ubuntu_Snappy_Core",
+    "imageSKU": "15.04"
+  },
+  "resources": [],
+  "outputs": {},
+  "smc365attributes": {
+    "appProfileName": "humhrmapfrsg005",
+    "appProfileId": 1,
+    "smcImageId": 3,
+    "osType": "Linux",
+    "allowUserToSelectBuild": false,
+    "templateDescription": "Ubuntu Core",
+    "planInfoNeeded": false
+  }
+}
