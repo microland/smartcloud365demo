@@ -1,0 +1,39 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Username for the VM",
+        "type": "string",
+        "displayname": "Username"
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Password for the VM",
+        "type": "securestring",
+        "displayname": "Password"
+      }
+    }
+  },
+  "variables": {
+    "vmSize": "Standard_A0",
+    "imagePublisher": "MicrosoftWindowsServer",
+    "imageOffer": "WindowsServer",
+    "imageSKU": "2012-Datacenter"
+  },
+  "resources": [],
+  "outputs": {},
+  "smc365attributes": {
+    "appProfileName": "intcmiapfrsg007",
+    "appProfileId": 3,
+    "smcImageId": 1,
+    "osType": "Windows",
+    "allowUserToSelectBuild": false,
+    "templateDescription": "Windows Datacenter 2012",
+    "planInfoNeeded": false
+  }
+}
